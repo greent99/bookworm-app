@@ -49,7 +49,7 @@ class BookController extends BaseController
                 $data = $category->group_category()->get();
                 return $this->responseSuccess($data);
             }
-            return $this->responseError($category,'Author not found',404);
+            return $this->responseError($book,'Author not found',404);
         }
         return $this->responseError(null);
     }
