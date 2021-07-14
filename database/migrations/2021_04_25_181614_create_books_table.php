@@ -20,6 +20,7 @@ class CreateBooksTable extends Migration
             $table->tinyText('book_title');
             $table->text('book_summary');
             $table->decimal('book_price', 5, 2, true);
+            $table->float('rating_avg')->default(0);
             $table->string('book_cover_photo', 20)->nullable();
         });
     }
