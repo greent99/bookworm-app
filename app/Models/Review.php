@@ -10,4 +10,6 @@ class Review extends Model
     use HasFactory;
 
     public $timestamps = false;
+
+    protected $fillable = ['book_id', 'review_title', 'review_details', 'rating_start', 'review_date'];
 }

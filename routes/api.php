@@ -33,6 +33,8 @@ Route::group(['prefix' => 'authors'], function () {
 Route::group(['prefix' => 'books'], function () {
     Route::get('/', 'BookController@index');
     Route::get('/detail/{id}', 'BookController@detail');
+    Route::get('/{id}/reviews', 'BookController@getReview');
+    Route::post('/{id}/addReview', 'BookController@addReview');
 });
 
 
